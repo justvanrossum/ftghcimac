@@ -1,0 +1,25 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Show Python version info
+      run: |
+        python -c "import sys; print(sys.version); print(sys.executable); print(sys.path)"
+        python -c "import platform; print(platform.platform())
+    - name: Install freetype-py
+      run: |
+        pip install --upgrade pip
+        pip install freetype-py
+    - name: Test freetype-py
+      python -c "import freetype; print(freetype)"
