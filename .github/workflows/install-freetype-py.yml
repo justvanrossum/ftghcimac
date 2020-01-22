@@ -19,7 +19,7 @@ jobs:
         python -c "import platform; print(platform.platform())"
     - name: Install freetype-py
       run: |
-        pip install --upgrade pip
+        pip install pip==19.3.1
         pip install freetype-py
     - name: Test freetype-py
       run: |
