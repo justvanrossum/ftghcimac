@@ -22,4 +22,5 @@ jobs:
         pip install --upgrade pip
         pip install freetype-py
     - name: Test freetype-py
+      run: |
         python -c "import freetype; print(freetype)"
