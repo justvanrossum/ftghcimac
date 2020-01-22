@@ -1,4 +1,4 @@
-name: CI
+name: Test install freetype-py
 
 on: [push]
 
