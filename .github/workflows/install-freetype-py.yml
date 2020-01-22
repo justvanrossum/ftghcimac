@@ -16,7 +16,7 @@ jobs:
     - name: Show Python version info
       run: |
         python -c "import sys; print(sys.version); print(sys.executable); print(sys.path)"
-        python -c "import platform; print(platform.platform())
+        python -c "import platform; print(platform.platform())"
     - name: Install freetype-py
       run: |
         pip install --upgrade pip
